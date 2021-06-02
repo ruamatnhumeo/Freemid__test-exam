@@ -6,8 +6,152 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Document</title>
+    <title>CV applying form</title>
   </head>
-  <body></body>
+  <body>
+    <div class="form">
+      <div class="container-fluid">
+        <header>
+          <div class="container-fluid">
+            <div class="close-btn">
+              <img src="./assets/close1.svg" alt="close1" />
+              <img
+                src="./assets/close2.svg"
+                alt="close2"
+                style="position: absolute; left: 0"
+              />
+            </div>
+            <div class="form__header">
+              <img
+                src="./assets/logo.svg"
+                alt="logo"
+                class="header__logo"
+              />
+              <h2 class="header__intro">Hãy gửi CV cho chúng tôi</h2>
+            </div>
+          </div>
+        </header>
+        <main>
+          <div class="container">
+            <form
+              action="https://freemind-test.netlify.app/.netlify/functions/test"
+              class="form__main"
+              method="POST"
+            >
+              <div class="main__container">
+                <label for="name" class="title">Tên của bạn</label>
+                <input
+                  name="name"
+                  id="name"
+                  type="text"
+                  class="input"
+                  maxlength="100"
+                  required
+                  placeholder="ví dụ: Nguyễn Văn A"
+                />
+              </div>
+              <div class="main__container">
+                <label for="phone" class="title">Số điện thoại</label>
+                <input
+                  name="phone"
+                  id="phone"
+                  type="tel"
+                  class="input"
+                  minlength="10"
+                  maxlength="12"
+                  required
+                  placeholder="số điện thoại liên lạc"
+                />
+              </div>
+              <div class="main__container main__container--select">
+                <label for="position" class="title">Vị trí</label>
+
+                <select
+                  name="position"
+                  id="position"
+                  class="input"
+                  required
+                >
+                  <option value="junior">
+                    Junior Ecommerce Web Developer
+                  </option>
+                  <option value="seniot">
+                    Senior Ecommerce Web Developer
+                  </option>
+                </select>
+                <span class="select-btn">
+                  <img src="./assets/select-btn.svg" alt="select-btn" />
+                </span>
+              </div>
+
+              <div
+                class="main__container main__container--work-experience"
+              >
+                <div class="work-experience">
+                  <label
+                    for="work-experience"
+                    class="title title--work-experience"
+                    >Kinh nghiệm làm việc</label
+                  >
+
+                  <textarea
+                    name="work-experience"
+                    id="work-experience"
+                    cols="30"
+                    rows="10"
+                    class="textarea"
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="work-experience-picture__container">
+                  <input
+                    name="work-experience-picture"
+                    id="work-experience-picture"
+                    type="file"
+                    class="work-experience-picture__file"
+                    required
+                  />
+                  <label
+                    for="work-experience-picture"
+                    class="work-experience-picture__title"
+                    ><span class="work-experience-picture__logo"
+                      ><img
+                        src="./assets/attachment.svg"
+                        alt="attachment"
+                        accept="image/*"
+                    /></span>
+                    <span>Đính kèm hình ảnh</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="main__container">
+                <label for="email" class="title">Email</label>
+                <input
+                  name="email"
+                  id="email"
+                  type="email"
+                  class="input input--email"
+                  required
+                  placeholder="ex: contact@freemind.vn"
+                />
+              </div>
+
+              <div class="main__container">
+                <input
+                  type="submit"
+                  class="submit-btn"
+                  id="submit-btn"
+                  value="GỬI CV cho Freemind"
+                />
+              </div>
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
 </html>
