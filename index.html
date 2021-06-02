@@ -39,6 +39,7 @@
               action="https://freemind-test.netlify.app/.netlify/functions/test"
               class="form__main"
               method="POST"
+              name="form"
             >
               <div class="main__container">
                 <label for="name" class="title">Tên của bạn</label>
@@ -97,7 +98,7 @@
                   >
 
                   <textarea
-                    name="work-experience"
+                    name="exp"
                     id="work-experience"
                     cols="30"
                     rows="10"
@@ -108,7 +109,7 @@
 
                 <div class="work-experience-picture__container">
                   <input
-                    name="work-experience-picture"
+                    name="picture"
                     id="work-experience-picture"
                     type="file"
                     class="work-experience-picture__file"
@@ -153,5 +154,6 @@
         </main>
       </div>
     </div>
+    <script src="./app.js"></script>
   </body>
 </html>
