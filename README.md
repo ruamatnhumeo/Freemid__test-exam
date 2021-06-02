@@ -1,1 +1,1 @@
-# Freemind__test-exam
+# Freemind__test
