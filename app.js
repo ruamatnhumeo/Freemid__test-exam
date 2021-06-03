@@ -7,8 +7,8 @@ picInputFile.addEventListener('input', getPicName);
 function getPicName(event) {
   const fullname = event.target.files[0].name;
   const name = splitFullname(fullname);
-  console.log(form.value);
-  picInputFile.value = name;
+  // picInputFile.value = name;
+  return name;
 }
 
 function splitFullname(fullname) {
